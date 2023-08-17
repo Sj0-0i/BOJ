@@ -8,6 +8,8 @@ int board[103][103][103];
 int dist[103][103][103];
 queue<tuple<int, int, int>> q;
 
+// 1 - 익음, 0 - 익지 않음, -1 - 토마토가 없음
+
 int main(void) {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
