@@ -7,8 +7,6 @@ using ll = long long;
 // b가 홀수이면 a^b = a^(b/2) * a^(b/2 + 1)
 
 ll POW(ll a, ll b, ll c) {
-	if (b == 0)
-		return 1;
 	if (b == 1)
 		return a % c;
 
@@ -18,7 +16,7 @@ ll POW(ll a, ll b, ll c) {
 	if (b % 2 == 0)  // 짝수일 때
 		return val;
 
-	return val * a / c; // 홀수일 때
+	return val * a % c; // 홀수일 때
 }
 
 int main(void) {
